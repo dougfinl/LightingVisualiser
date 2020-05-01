@@ -18,7 +18,9 @@ const float visualiser::rendering::Camera::Y_ROT_SPEED    = 0.5f;
 const float visualiser::rendering::Camera::MIN_PITCH      = -89.5f;
 const float visualiser::rendering::Camera::MAX_PITCH      = 89.5f;
 
-visualiser::rendering::Camera::Camera() {
+visualiser::rendering::Camera::Camera() :
+  _viewportWidth(1),
+  _viewportHeight(1) {
     reset();
 }
 

@@ -7,7 +7,6 @@
 #include "../lighting/LightManager.h"
 #include "../stage/Stage.h"
 #include "../Constants.h"
-#include "../../make_unique.h"
 #include "Camera.h"
 #include "GeometryBuffer.h"
 #include <GLFW/glfw3.h>

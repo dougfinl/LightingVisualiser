@@ -7,7 +7,6 @@
 #include "lighting/LightingRig.h"
 #include "ColourManager.h"
 #include "Constants.h"
-#include "../make_unique.h"
 #include "rendering/Camera.h"
 #include <fstream>
 #include <boost/log/trivial.hpp>

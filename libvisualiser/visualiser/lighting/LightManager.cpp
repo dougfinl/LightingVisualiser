@@ -5,7 +5,6 @@
 #include "LightManager.h"
 #include "LightingRig.h"
 #include "DMXListener.h"
-#include "../../make_unique.h"
 #include <boost/log/trivial.hpp>
 
 

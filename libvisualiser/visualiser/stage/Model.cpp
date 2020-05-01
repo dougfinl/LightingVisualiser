@@ -13,7 +13,6 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtx/string_cast.hpp>
 #include "../Constants.h"
-#include "../../make_unique.h"
 
 
 visualiser::stage::Model::Model() {

@@ -1,9 +1,6 @@
-cmake_minimum_required(VERSION 2.8.4)
+cmake_minimum_required(VERSION 3.16.4)
 
-# add_definitions(-DBOOST_LOG_DYN_LINK)
 add_definitions(-DGLM_FORCE_RADIANS)
-
-set(Boost_USE_STATIC_LIBS ON)
 
 set(VISUALISER_SOURCE_FILES
         visualiser/rendering/Renderer.cpp
@@ -45,47 +42,34 @@ set(VISUALISER_SOURCE_FILES
         visualiser/rendering/ShadowBuffer.h
         ola/BoostLogDestination.cpp
         ola/BoostLogDestination.h)
-
 add_library(libvisualiser STATIC ${VISUALISER_SOURCE_FILES})
 
+set_target_properties(libvisualiser PROPERTIES
+  CXX_STANDARD          17
+  CXX_STANDARD_REQUIRED YES
+  CXX_EXTENSIONS        NO
+  )
+
 # OpenGL
-find_package(OpenGL REQUIRED)
-include_directories(${OpenGL_INCLUDE_DIRS})
-link_libraries(libvisualiser ${OpenGL_LIBRARIES})
+find_package(OpenGL REQUIRED
+  COMPONENTS OpenGL
+  )
 
 # GLEW
 find_package(GLEW REQUIRED STATIC)
 include_directories(${GLEW_INCLUDE_DIRS})
 target_link_libraries(libvisualiser ${GLEW_LIBRARIES})
 
-# GLFW3
-find_package(PkgConfig REQUIRED)
-pkg_search_module(GLFW REQUIRED glfw3)
-include_directories(${GLFW_INCLUDE_DIRS})
-target_link_libraries(libvisualiser ${GLFW_STATIC_LIBRARIES})
-
-# Protobuf
-pkg_search_module(PROTOBUF REQUIRED protobuf)
-include_directories(${PROTOBUF_INCLUDE_DIRS})
-target_link_libraries(libvisualiser ${PROTOBUF_STATIC_LIBRARIES})
-
 # OLA
 find_package(OLA REQUIRED)
 include_directories(${OLA_INCLUDE_DIRS})
 target_link_libraries(libvisualiser ${OLA_LIBRARIES})
 
-# YAML-CPP
-find_package(YamlCpp REQUIRED)
-include_directories(${YAMLCPP_INCLUDE_DIR})
-target_link_libraries(libvisualiser ${YAMLCPP_LIBRARY})
-
-# ASSIMP
-pkg_search_module(ASSIMP REQUIRED assimp)
-include_directories(${ASSIMP_INCLUDE_DIRS})
-target_link_libraries(libvisualiser ${ASSIMP_LIBRARIES})
-
 # Boost
-find_package(Boost COMPONENTS log log_setup thread system filesystem REQUIRED)
+find_package(Boost 1.72.0 COMPONENTS log log_setup thread system filesystem REQUIRED)
 link_directories(${Boost_LIBRARY_DIRS})
 include_directories(${Boost_INCLUDE_DIRS})
 target_link_libraries(libvisualiser ${Boost_LIBRARIES})
+
+# Final linkage
+target_link_libraries(libvisualiser yaml-cpp glfw assimp protobuf glm OpenGL::OpenGL)

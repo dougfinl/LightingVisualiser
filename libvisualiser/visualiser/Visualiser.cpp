@@ -7,7 +7,6 @@
 #include "rendering/Renderer.h"
 #include "stage/Stage.h"
 #include "lighting/LightManager.h"
-#include "../make_unique.h"
 #include <boost/log/utility/setup.hpp>
 #include <boost/log/trivial.hpp>
 #include <boost/log/support/date_time.hpp>
