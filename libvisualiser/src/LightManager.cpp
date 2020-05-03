@@ -2,9 +2,9 @@
 // Created by dgf6 on 28/10/15.
 //
 
-#include "LightManager.h"
-#include "LightingRig.h"
-#include "DMXListener.h"
+#include "libvisualiser/LightManager.h"
+#include "libvisualiser/LightingRig.h"
+#include "libvisualiser/DMXListener.h"
 #include <boost/log/trivial.hpp>
 
 

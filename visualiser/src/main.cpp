@@ -2,7 +2,7 @@
 // Created by dgf6 on 28/10/15.
 //
 
-#include "visualiser/Visualiser.h"
+#include "libvisualiser/Visualiser.h"
 #include <iostream>
 #include <boost/program_options.hpp>
 #include <boost/assign.hpp>

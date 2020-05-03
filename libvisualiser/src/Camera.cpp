@@ -3,7 +3,7 @@
 //
 
 #include <glm/gtc/matrix_transform.hpp>
-#include "Camera.h"
+#include "libvisualiser/Camera.h"
 #include <boost/log/trivial.hpp>
 
 

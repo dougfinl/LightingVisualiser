@@ -5,7 +5,7 @@
 #ifndef VISUALISER_MESH_H
 #define VISUALISER_MESH_H
 
-#include "../rendering/IRenderable.h"
+#include "IRenderable.h"
 #include "Texture.h"
 #include <glm/glm.hpp>
 #include <GL/glew.h>

@@ -2,8 +2,8 @@
 // Created by dougfinl on 18/11/15.
 //
 
-#include "DMXListener.h"
-#include "../../ola/BoostLogDestination.h"
+#include "libvisualiser/DMXListener.h"
+#include "BoostLogDestination.h"
 #include <boost/log/trivial.hpp>
 
 

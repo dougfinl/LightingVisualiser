@@ -6,7 +6,7 @@
 #define VISUALISER_MODEL_H
 
 
-#include "../rendering/IRenderable.h"
+#include "IRenderable.h"
 #include "Mesh.h"
 #include "Texture.h"
 #include <memory>

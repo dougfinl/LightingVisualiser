@@ -2,7 +2,7 @@
 // Created by dougfinl on 25/01/16.
 //
 
-#include "ColourManager.h"
+#include "libvisualiser/ColourManager.h"
 #include <boost/log/trivial.hpp>
 #include <fstream>
 #include <glm/gtc/type_ptr.hpp>

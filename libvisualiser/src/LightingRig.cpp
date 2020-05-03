@@ -2,7 +2,7 @@
 // Created by dougfinl on 21/11/15.
 //
 
-#include "LightingRig.h"
+#include "libvisualiser/LightingRig.h"
 #include <boost/log/trivial.hpp>
 #include <glm/gtx/rotate_vector.hpp>
 

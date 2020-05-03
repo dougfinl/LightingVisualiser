@@ -2,8 +2,8 @@
 // Created by dougfinl on 09/02/16.
 //
 
-#include "GeometryBuffer.h"
-#include "../Constants.h"
+#include "libvisualiser/GeometryBuffer.h"
+#include "Constants.h"
 #include <boost/log/trivial.hpp>
 
 

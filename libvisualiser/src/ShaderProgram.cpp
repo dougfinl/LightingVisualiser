@@ -2,7 +2,7 @@
 // Created by dougfinl on 30/10/15.
 //
 
-#include "ShaderProgram.h"
+#include "libvisualiser/ShaderProgram.h"
 #include <fstream>
 #include <vector>
 #include <glm/gtc/type_ptr.hpp>

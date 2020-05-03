@@ -5,7 +5,7 @@
 #ifndef VISUALISER_LIGHTCONTROLLER_H
 #define VISUALISER_LIGHTCONTROLLER_H
 
-#include "../rendering/IUpdatable.h"
+#include "IUpdatable.h"
 #include <memory>
 #include <thread>
 

@@ -2,12 +2,12 @@
 // Created by dougfinl on 21/11/15.
 //
 
-#include "ShowFileLoader.h"
-#include "stage/Stage.h"
-#include "lighting/LightingRig.h"
-#include "ColourManager.h"
+#include "libvisualiser/ShowFileLoader.h"
+#include "libvisualiser/Stage.h"
+#include "libvisualiser/LightingRig.h"
+#include "libvisualiser/ColourManager.h"
 #include "Constants.h"
-#include "rendering/Camera.h"
+#include "libvisualiser/Camera.h"
 #include <fstream>
 #include <boost/log/trivial.hpp>
 #include <boost/filesystem.hpp>

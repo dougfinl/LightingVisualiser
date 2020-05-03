@@ -5,7 +5,7 @@
 #ifndef VISUALISER_SHOWFILELOADER_H
 #define VISUALISER_SHOWFILELOADER_H
 
-#include "rendering/Camera.h"
+#include "Camera.h"
 #include <map>
 #include <string>
 #include <yaml-cpp/node/node.h>

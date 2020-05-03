@@ -2,7 +2,7 @@
 // Created by dougfinl on 22/03/16.
 //
 
-#include "AbstractFramebuffer.h"
+#include "libvisualiser/AbstractFramebuffer.h"
 #include <boost/log/trivial.hpp>
 
 visualiser::rendering::AbstractFramebuffer::~AbstractFramebuffer() {

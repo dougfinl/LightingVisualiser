@@ -2,8 +2,8 @@
 // Created by dougfinl on 22/03/16.
 //
 
-#include "ShadowBuffer.h"
-#include "../Constants.h"
+#include "libvisualiser/ShadowBuffer.h"
+#include "Constants.h"
 #include <boost/log/trivial.hpp>
 
 visualiser::rendering::ShadowBuffer::~ShadowBuffer() {

@@ -2,8 +2,8 @@
 // Created by dougfinl on 10/11/15.
 //
 
-#include "Mesh.h"
-#include "../Constants.h"
+#include "libvisualiser/Mesh.h"
+#include "Constants.h"
 #include <boost/log/trivial.hpp>
 
 

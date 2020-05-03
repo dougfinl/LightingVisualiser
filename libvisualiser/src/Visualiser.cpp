@@ -2,11 +2,11 @@
 // Created by dougfinl on 01/12/15.
 //
 
-#include "Visualiser.h"
-#include "ShowFileLoader.h"
-#include "rendering/Renderer.h"
-#include "stage/Stage.h"
-#include "lighting/LightManager.h"
+#include "libvisualiser/Visualiser.h"
+#include "libvisualiser/ShowFileLoader.h"
+#include "libvisualiser/Renderer.h"
+#include "libvisualiser/Stage.h"
+#include "libvisualiser/LightManager.h"
 #include <boost/log/utility/setup.hpp>
 #include <boost/log/trivial.hpp>
 #include <boost/log/support/date_time.hpp>

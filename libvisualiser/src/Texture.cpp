@@ -2,13 +2,13 @@
 // Created by dougfinl on 26/01/16.
 //
 
-#include "Texture.h"
+#include "libvisualiser/Texture.h"
 
 
 #define STB_IMAGE_IMPLEMENTATION
 
-#include "../../stb_image.h"
-#include "../Constants.h"
+#include "../libs/stb_image.h"
+#include "Constants.h"
 #include <boost/filesystem/operations.hpp>
 #include <boost/log/trivial.hpp>
 

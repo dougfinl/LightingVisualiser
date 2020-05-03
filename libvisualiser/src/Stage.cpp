@@ -2,7 +2,7 @@
 // Created by dgf6 on 28/10/15.
 //
 
-#include "Stage.h"
+#include "libvisualiser/Stage.h"
 #include <boost/log/trivial.hpp>
 
 

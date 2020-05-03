@@ -7,8 +7,8 @@
 
 #include <vector>
 #include <glm/glm.hpp>
-#include "../stage/Texture.h"
-#include "../rendering/ShadowBuffer.h"
+#include "Texture.h"
+#include "ShadowBuffer.h"
 
 
 namespace visualiser {

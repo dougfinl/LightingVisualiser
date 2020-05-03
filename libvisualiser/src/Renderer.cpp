@@ -2,13 +2,13 @@
 // Created by dgf6 on 28/10/15.
 //
 
-#include "Renderer.h"
-#include "ShaderProgram.h"
-#include "../lighting/LightManager.h"
-#include "../stage/Stage.h"
-#include "../Constants.h"
-#include "Camera.h"
-#include "GeometryBuffer.h"
+#include "libvisualiser/Renderer.h"
+#include "libvisualiser/ShaderProgram.h"
+#include "libvisualiser/LightManager.h"
+#include "libvisualiser/Stage.h"
+#include "Constants.h"
+#include "libvisualiser/Camera.h"
+#include "libvisualiser/GeometryBuffer.h"
 #include <GLFW/glfw3.h>
 #include <boost/log/trivial.hpp>
 

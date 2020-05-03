@@ -2,8 +2,8 @@
 // Created by dougfinl on 10/11/15.
 //
 
-#include "Model.h"
-#include "Texture.h"
+#include "libvisualiser/Model.h"
+#include "libvisualiser/Texture.h"
 #include <assimp/Importer.hpp>
 #include <assimp/postprocess.h>
 #include <assimp/scene.h>
@@ -12,7 +12,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtx/string_cast.hpp>
-#include "../Constants.h"
+#include "Constants.h"
 
 
 visualiser::stage::Model::Model() {

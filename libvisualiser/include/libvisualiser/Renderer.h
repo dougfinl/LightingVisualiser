@@ -6,7 +6,7 @@
 #define VISUALISER_RENDERER_H
 
 #include "IUpdatable.h"
-#include "../lighting/LightingRig.h"
+#include "LightingRig.h"
 #include "Camera.h"
 #include <GL/glew.h>
 #include <map>

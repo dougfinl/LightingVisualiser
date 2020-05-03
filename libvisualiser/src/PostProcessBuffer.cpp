@@ -2,8 +2,8 @@
 // Created by dougfinl on 21/03/16.
 //
 
-#include "PostProcessBuffer.h"
-#include "../Constants.h"
+#include "libvisualiser/PostProcessBuffer.h"
+#include "Constants.h"
 #include <boost/log/trivial.hpp>
 
 
