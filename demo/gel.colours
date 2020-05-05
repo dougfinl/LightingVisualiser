@@ -1,0 +1,91 @@
+gel:
+  - code: "L058"
+    name: "Lavender"
+    desc: "An excellent backlight that creates a new dimension."
+    xyY:  [0.212, 0.099, 8.9]
+    src:  6774
+  - code: "L071"
+    name: "Tokyo Blue"
+    desc: "A deep blue, used for midnight scenes and cyclorama lighting."
+    xyY:  [0.151, 0.03, 1]
+    src:  6774
+  - code: "L103"
+    name: "Straw"
+    desc: "Pale sunlight through a window and a good warm winter effect."
+    xyY:  [0.336, 0.359, 81.6]
+    src:  6774
+  - code: "L106"
+    name: "Primary Red"
+    desc: "Strong red effect. Good with cyclorama lighting."
+    xyY:  [0.699, 0.285, 9.3]
+    src:  6774
+  - code: "L119"
+    name: "Dark Blue"
+    desc: "Good for mood effects created by backlighting and side lighting. Creates great contrast."
+    xyY:  [0.142, 0.054, 3.1]
+    src:  6774
+  - code: "L124"
+    name: "Dark Green"
+    desc: "Good for cycloramas and backlighting."
+    xyY:  [0.123, 0.586, 29.7]
+    src:  6774
+  - code: "L130"
+    name: "Clear"
+    desc: "Used in animation and projection work."
+    xyY:  [0.311, 0.317, 95]
+    src:  6774
+  - code: "L164"
+    name: "Flame Red"
+    desc: "Great for fire effects."
+    xyY:  [0.659, 0.302, 18]
+    src:  6774
+  - code: "L181"
+    name: "Congo Blue"
+    desc: "Looks like black light when used with a fluorescent source. Great effect colour. Very saturated."
+    xyY:  [0.158, 0.035, 0.8]
+    src:  6774
+  - code: "L200"
+    name: "Double C.T. Blue"
+    desc: "Converts tungsten (3200K) to daylight (26000K)."
+    xyY:  [0.179, 0.155, 16.2]
+    src:  6774
+  - code: "L201"
+    name: "Full C.T. Blue"
+    desc: "Converts tungsten (3200K) to photographic daylight (5700K)."
+    xyY:  [0.228, 0.233, 34]
+    src:  6774
+  - code: "L202"
+    name: "Half C.T. Blue"
+    desc: "Converts tungsten (3200K) to daylight (4300K)."
+    xyY:  [0.261, 0.273, 54.9]
+    src:  6774
+  - code: "L203"
+    name: "Quarter C.T. Blue"
+    desc: "Converts tungsten (3200K) to daylight (3600K)."
+    xyY:  [0.285, 0.294, 69.3]
+    src:  6774
+  - code: "L219"
+    name: "LEE Fluorescent Green"
+    desc: "General tungsten to fluorescent correction for use when fluorescent colour temp is unknown, to provide medium correction."
+    xyY:  [0.219, 0.334, 31]
+    src:  6774
+  - code: "L328"
+    name: "Follies Pink"
+    desc: "Great for dramatic stage lighting."
+    xyY:  [0.335, 0.18, 21.6]
+    src:  6774
+  - code: "L600"
+    name: "Arctic White"
+    desc: "Bright, brilliant blue-grey light at 100%. It does not warm up as it dims and is not affected by amber drift. Useful as backlight or for special effects where a whiter light is called for."
+    xyY:  [0.23, 0.223, 9.5]
+    src:  6774
+  - code: "L709"
+    name: "Electric Lilac"
+    desc: "Provides good colour rendering which creates a sharp edge, adding a touch of drama."
+    xyY:  [0.24, 0.228, 35.2]
+    src:  6774
+  - code: "L728"
+    name: "Steel Green"
+    desc: "Approaching storms. Overcast days. Cold steely light. Malevolent moonlight."
+    xyY:  [0.256, 0.302, 45.9]
+    src:  6774

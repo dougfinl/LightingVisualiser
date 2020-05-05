@@ -1,0 +1,164 @@
+models:
+  - src: models/floor/floorWhite.obj
+    position: [0, 0, 0]
+  - src: models/mannequin/mannequin.obj
+    position: [0, 0.55, 0]
+  - src: models/tree/tree.obj
+    scale: 2
+    position: [3, 0, -3]
+  - src: models/armchair/armchair.obj
+    scale: 0.01
+    position: [2.5, 1.45, -2]
+    rotation: [0, -145, 0]
+
+ambientIntensity: 0.01
+
+spotLights:
+  - address: 1
+    ctemp: 3200
+    position: [1, 6, 3]
+    target: [0, 2.8, 0]
+    beamAngle: 30
+    fieldAngle: 42
+    gel: L201
+  - address: 2
+    ctemp: 5600
+    position: [-1, 6, 3]
+    target: [0, 2.8, 0]
+    beamAngle: 20
+    fieldAngle: 42
+    gel: L201
+  - address: 3
+    ctemp: 5600
+    position: [-5, 6, -2]
+    target: [0, 2.5, 0]
+    beamAngle: 30
+    fieldAngle: 40
+    gel: L106
+    gobo: 673
+    goboRotation: -30
+  - address: 4
+    ctemp: 5600
+    position: [5, 6, -2]
+    target: [0, 2.5, 0]
+    beamAngle: 30
+    fieldAngle: 40
+    gel: L106
+    gobo: 673
+    goboRotation: 30
+  - address: 11
+    ctemp: 4200
+    position: [-3.5, 6, -5.5]
+    target: [-3.75, 0, 0]
+    beamAngle: 15
+    fieldAngle: 25
+    gel: L181
+  - address: 12
+    ctemp: 4200
+    position: [-2.5, 6, -5.5]
+    target: [-2.75, 0, 0]
+    beamAngle: 15
+    fieldAngle: 25
+    gel: L181
+  - address: 13
+    ctemp: 4200
+    position: [-1.5, 6, -5.5]
+    target: [-1.75, 0, 0]
+    beamAngle: 15
+    fieldAngle: 25
+    gel: L181
+  - address: 14
+    ctemp: 4200
+    position: [-0.5, 6, -5.5]
+    target: [-0.75, 0, 0]
+    beamAngle: 15
+    fieldAngle: 25
+    gel: L181
+  - address: 15
+    ctemp: 4200
+    position: [0.5, 6, -5.5]
+    target: [0.25, 0, 0]
+    beamAngle: 15
+    fieldAngle: 25
+    gel: L181
+  - address: 16
+    ctemp: 4200
+    position: [1.5, 6, -5.5]
+    target: [1.25, 0, 0]
+    beamAngle: 15
+    fieldAngle: 25
+    gel: L181
+  - address: 17
+    ctemp: 4200
+    position: [2.5, 6, -5.5]
+    target: [2.25, 0, 0]
+    beamAngle: 15
+    fieldAngle: 25
+    gel: L181
+  - address: 18
+    ctemp: 4200
+    position: [3.5, 6, -5.5]
+    target: [3.25, 0, 0]
+    beamAngle: 15
+    fieldAngle: 25
+    gel: L181
+  - address: 21
+    ctemp: 4215
+    position: [-3.5, 6, -5.5]
+    target: [-3.75, 0, 0]
+    beamAngle: 15
+    fieldAngle: 25
+  - address: 22
+    ctemp: 4200
+    position: [-2.5, 6, -5.5]
+    target: [-2.75, 0, 0]
+    beamAngle: 12
+    fieldAngle: 15
+  - address: 23
+    ctemp: 4200
+    position: [-1.5, 6, -5.5]
+    target: [-1.75, 0, 0]
+    beamAngle: 15
+    fieldAngle: 25
+  - address: 24
+    ctemp: 4200
+    position: [-0.5, 6, -5.5]
+    target: [-0.75, 0, 0]
+    beamAngle: 15
+    fieldAngle: 25
+  - address: 25
+    ctemp: 4200
+    position: [0.5, 6, -5.5]
+    target: [0.25, 0, 0]
+    beamAngle: 15
+    fieldAngle: 25
+  - address: 26
+    ctemp: 4200
+    position: [1.5, 6, -5.5]
+    target: [1.25, 0, 0]
+    beamAngle: 15
+    fieldAngle: 25
+  - address: 27
+    ctemp: 4200
+    position: [2.5, 6, -5.5]
+    target: [2.25, 0, 0]
+    beamAngle: 15
+    fieldAngle: 25
+  - address: 28
+    ctemp: 4200
+    position: [3.5, 6, -5.5]
+    target: [3.25, 0, 0]
+    beamAngle: 15
+    fieldAngle: 25
+
+pointLights:
+  - address: 31
+    position: [0, 8, 0]
+    ctemp: 5600
+    gel: L728
+
+camera:
+  presets:
+    - key: 1
+      position: [0, 8, 6]
+      target: [0, 2, 0]

@@ -34,3 +34,35 @@ cmake ..
 make -j4
 ```
 Binary will be located at `build/visualiser`
+
+
+## Usage
+
+`./visualiser show_name.vis`
+
+### Relative Directory Structure
+
+__Note:__ currently, the executable must be located at the same level as the show files.
+
+<pre><code><strong>demo</strong>
+├── demo.vis
+├── gel.colours
+├── <strong>gobos</strong>
+│   ├── 228.png
+│   ├── 673.png
+│   ├── 77053.png
+│   └── ...
+├── <strong>models</strong>
+│   ├── <strong>armchair</strong>
+│   │   ├── armchair.mtl
+│   │   └── armchair.obj
+│   ├── <strong>floor</strong>
+│   │   └── ...
+│   └── ...
+├── <strong>shaders</strong>
+│   └── ...
+└── <em>visualiser</em></code></pre>
+
+Read [`docs/showfilespec.md`](docs/showfilespec.md) for the show file specification.
+
+Read [`docs/gelcoloursspec.md`](docs/gelcoloursspec.md) for the gel colours file specification.

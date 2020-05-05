@@ -20,3 +20,9 @@ cmake-build*/
 .kdev4
 .vscode
 .idea
+
+# Demo files
+demo/gobos/*
+!demo/gobos/.gitkeep
+demo/models/*
+!demo/models/.gitkeep
