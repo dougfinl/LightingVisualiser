@@ -2,11 +2,21 @@
 // Created by dgf6 on 28/10/15.
 //
 
-#include "libvisualiser/Visualiser.h"
+#include "libvisualiser/VisualiserCore.h"
 #include <iostream>
 #include <boost/program_options.hpp>
 #include <boost/assign.hpp>
 
+
+struct VisualiserConfig {
+    std::string showFilePath;
+    unsigned int universe;
+    unsigned int resX;
+    unsigned int resY;
+    bool fullscreen;
+    bool debugMessages;
+    bool realLighting;
+};
 
 namespace po = boost::program_options;
 
@@ -20,7 +30,7 @@ static void checkResolutionOption(const std::vector<unsigned int> &res) {
     }
 }
 
-visualiser::VisualiserConfig parseConfigurationOptions(const int argc, const char **argv) {
+VisualiserConfig parseConfigurationOptions(const int argc, const char **argv) {
     // Setup the option parser
     po::options_description desc("Allowed options:");
     desc.add_options()
@@ -83,7 +93,7 @@ visualiser::VisualiserConfig parseConfigurationOptions(const int argc, const cha
         exit(EXIT_FAILURE);
     }
 
-    visualiser::VisualiserConfig config;
+    VisualiserConfig config;
     config.showFilePath = showfile;
     config.universe = universe;
     config.resX = resX;
@@ -96,10 +106,11 @@ visualiser::VisualiserConfig parseConfigurationOptions(const int argc, const cha
 }
 
 int main(int argc, const char **argv) {
-    visualiser::VisualiserConfig config = parseConfigurationOptions(argc, argv);
+    VisualiserConfig config = parseConfigurationOptions(argc, argv);
 
-    visualiser::Visualiser v(config);
-    v.run();
+    auto v = visualiser::VisualiserCore::instance();
+    v->loadShowFile(config.showFilePath);
+    v->run();
 
     return EXIT_SUCCESS;
 }

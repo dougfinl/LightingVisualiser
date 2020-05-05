@@ -21,7 +21,7 @@ add_library(libvisualiser STATIC
     src/ShowFileLoader.cpp
     src/Stage.cpp
     src/Texture.cpp
-    src/Visualiser.cpp
+    src/VisualiserCore.cpp
     )
 
 target_include_directories(libvisualiser

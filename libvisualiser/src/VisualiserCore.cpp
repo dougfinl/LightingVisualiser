@@ -2,7 +2,7 @@
 // Created by dougfinl on 01/12/15.
 //
 
-#include "libvisualiser/Visualiser.h"
+#include "libvisualiser/VisualiserCore.h"
 #include "libvisualiser/ShowFileLoader.h"
 #include "libvisualiser/Renderer.h"
 #include "libvisualiser/Stage.h"
@@ -17,28 +17,23 @@ namespace logging  = boost::log;
 namespace expr     = logging::expressions;
 namespace keywords = logging::keywords;
 
-visualiser::Visualiser::Visualiser(const visualiser::VisualiserConfig &config) :
-    _config(config),
-    _renderer(std::make_unique<rendering::Renderer>(config.resX, config.resY, config.fullscreen)) {
-    initLogging(config.debugMessages);
+visualiser::VisualiserCore* visualiser::VisualiserCore::_singleInstance = nullptr;
 
-    loadShowFile(config.showFilePath);
-    if (config.realLighting)
-        _renderer->setLightingMode(rendering::Renderer::REALISTIC_LIGHTING);
+visualiser::VisualiserCore::VisualiserCore() :
+    _renderer(std::make_unique<rendering::Renderer>()) {
+    initLogging();
 }
 
-visualiser::Visualiser::~Visualiser() {
-}
-
-void visualiser::Visualiser::run() const {
-    lighting::LightManager lightManager(_rig, _config.universe, 20);
+void visualiser::VisualiserCore::run() const {
+    // FIXME currently running on universe 1 by default
+    lighting::LightManager lightManager(_rig, 1, 20);
 
     lightManager.start();
     _renderer->start();
     lightManager.stop();
 }
 
-void visualiser::Visualiser::initLogging(const bool debug) const {
+void visualiser::VisualiserCore::initLogging(const bool debug) const {
     logging::add_console_log(
         std::cout,
         keywords::format = (
@@ -63,7 +58,7 @@ void visualiser::Visualiser::initLogging(const bool debug) const {
     }
 }
 
-void visualiser::Visualiser::loadShowFile(const std::string &showFilePath) {
+void visualiser::VisualiserCore::loadShowFile(const std::string &showFilePath) {
     ShowFileLoader loader;
     if (loader.load(showFilePath)) {
         _stage = loader.getStage();
@@ -73,4 +68,12 @@ void visualiser::Visualiser::loadShowFile(const std::string &showFilePath) {
         _renderer->setLightingRig(_rig);
         _renderer->setCameraPresets(loader.getCameraPresets());
     }
+}
+
+visualiser::VisualiserCore *visualiser::VisualiserCore::instance() {
+    if (!_singleInstance) {
+        _singleInstance = new VisualiserCore();
+    }
+
+    return _singleInstance;
 }

@@ -29,34 +29,22 @@ class Renderer;
 
 } // namespace rendering
 
-// Stores the configuration for a visualiser program instance.
-struct VisualiserConfig {
-    std::string showFilePath;
-    unsigned int universe;
-    unsigned int resX;
-    unsigned int resY;
-    bool fullscreen;
-    bool debugMessages;
-    bool realLighting;
-};
-
 //
 // An interactive, DMX-based 3D lighting visualiser.
 //
-class Visualiser {
+class VisualiserCore {
     public:
-        // Creates a new visualiser based upon the given configuration.
-        Visualiser(const VisualiserConfig &config);
-        // Destructor.
-        virtual ~Visualiser();
-        // Runs the visualiser and displays output to the screen.
+        static VisualiserCore *instance();
+
+        void loadShowFile(const std::string &showFilePath);
         void run() const;
 
-    private:
-        void initLogging(const bool debug) const;
-        void loadShowFile(const std::string &showFilePath);
+private:
+        VisualiserCore();
 
-        VisualiserConfig _config;
+        void initLogging(const bool debug = false) const;
+
+        static VisualiserCore* _singleInstance;
         std::shared_ptr<stage::Stage> _stage;
         std::shared_ptr<lighting::LightingRig> _rig;
         std::unique_ptr<rendering::Renderer> _renderer;
